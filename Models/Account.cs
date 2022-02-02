@@ -3,18 +3,16 @@ using System.ComponentModel.DataAnnotations;
 namespace  CourseApi.Models{
     public class Account{
         [Key]
-        public int Id {get; set;}
-
-        [Required(ErrorMessage = "Test")]
-        [MaxLength(30, ErrorMessage = "Field too long")]
-        [MinLength(3, ErrorMessage = "Field not long enough")]
+        public string? id {get; set;}
         
-        public string? Title { get; set; }
+        public string? fromAccount { get; set; }
 
-        [Required(ErrorMessage = "Test")]
-        [MaxLength(30, ErrorMessage = "Field too long")]
-        [MinLength(3, ErrorMessage = "Field not long enough")]
+        public string? toAccount {get; set;}
 
-        public string? AccountType {get; set;}
+        public string? description { get; set; }
+
+        public float amount { get; set;}
+
+
     }
 }
