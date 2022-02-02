@@ -7,7 +7,7 @@ namespace CourseApi.Data{
         { }
     
 
-        public DbSet<Users> User {get; set;}
+        public DbSet<Customer> Customer {get; set;}
         public DbSet<Account> Accounts {get; set;}
     }
 }
