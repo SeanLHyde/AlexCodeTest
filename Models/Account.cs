@@ -2,8 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace  CourseApi.Models{
     public class Account{
-        [Key]
-        public string? id {get; set;}
+       [Key]
+        public Guid id {get; set;}
         
         public string? fromAccount { get; set; }
 
@@ -13,6 +13,8 @@ namespace  CourseApi.Models{
 
         public float amount { get; set;}
 
+        public DateTime date { get; set;}
 
+        public Customer? owner { get; set; }
     }
 }

@@ -20,8 +20,8 @@ namespace CourseApi.Controllers
         [Route("")]
         public async Task<ActionResult<List<Account>>> GetAction([FromServices] DataContext context)
         {
-            var accounts = await context.Accounts.ToListAsync();
-            return accounts;
+            var accounts = await context.Accounts.Include(x => x.owner).ToListAsync();
+            return accounts; 
         }
 
         [HttpPost]

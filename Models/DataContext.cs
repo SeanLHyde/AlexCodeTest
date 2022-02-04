@@ -5,9 +5,8 @@ namespace CourseApi.Data{
     public class DataContext : DbContext {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         { }
-    
 
-        public DbSet<Customer> Customer {get; set;}
+        public DbSet<Customer> Customers {get; set;}
         public DbSet<Account> Accounts {get; set;}
     }
 }
